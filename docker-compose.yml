@@ -52,8 +52,8 @@ services:
     restart: always
   tendermint:
     image: tendermint/tendermint:v0.31.5
-    # volumes:
-    #   - ./tmdata:/tendermint
+    volumes:
+      - ./tmdata:/tendermint
     entrypoint: ''
     ports:
       - "26656:26656"
